@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "dau-icp-backend": {
+      "candid": "src/dau-icp-backend/dau-icp-backend.did",
+      "package": "dau-icp-backend",
+      "type": "rust"
+    },
+    "dau-icp-frontend": {
+      "dependencies": [
+        "dau-icp-backend"
+      ],
+      "source": [
+        "src/dau-icp-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "dau-icp-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
